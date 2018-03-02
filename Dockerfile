@@ -1,4 +1,4 @@
-FROM fedora
+FROM fedora:27
 MAINTAINER Michael Altizer <mialtize@cisco.com>
 
 # Add /usr/local/lib and /usr/local/lib64 to the ldconfig caching paths
