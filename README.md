@@ -1,4 +1,5 @@
 Snort++ build quick start (inside the container) with unit test support:
+
 ```
 cd $HOME
 git clone https://github.com/cpputest/cpputest.git
@@ -19,7 +20,7 @@ ldconfig
 cd $HOME
 git clone https://github.com/snortadmin/snort3.git
 cd snort3
-PKG_CONFIG_PATH=$HOME/install/cpputest/lib/pkgconfig ./configure_cmake.sh --prefix=$HOME/install/snort3 --enable-unit-tests
+PKG_CONFIG_PATH=$HOME/install/cpputest/lib64/pkgconfig ./configure_cmake.sh --prefix=$HOME/install/snort3 --enable-unit-tests
 cd build
 make -j$(nproc) install
 make check
