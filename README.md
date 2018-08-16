@@ -5,7 +5,7 @@ git clone https://github.com/cpputest/cpputest.git
 cd cpputest
 mkdir obj
 cd obj
-cmake -DC++11=ON -DCMAKE_INSTALL_PREFIX=$HOME/install/cpputest ..
+cmake -DC++11=ON ..
 make -j$(nproc) install
 
 cd $HOME
@@ -19,10 +19,10 @@ ldconfig
 cd $HOME
 git clone https://github.com/snort3/snort3.git
 cd snort3
-PKG_CONFIG_PATH=$HOME/install/cpputest/lib/pkgconfig ./configure_cmake.sh --prefix=$HOME/install/snort3 --enable-unit-tests
+./configure_cmake.sh --prefix=$HOME/install/snort3 --enable-unit-tests
 cd build
 make -j$(nproc) install
-make check
+make -j$(nproc) check
 
 $HOME/install/snort3/bin/snort -V
 $HOME/install/snort3/bin/snort --catch-test all
