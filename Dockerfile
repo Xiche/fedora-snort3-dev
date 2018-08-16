@@ -8,7 +8,7 @@ RUN \
 # Update the image's pre-installed packages
 dnf upgrade --refresh -y && \
 # Install the Snort build dependencies
-dnf install -y bison cmake file flatbuffers-devel flex gcc-c++ hwloc-devel hyperscan-devel libdnet-devel libpcap-devel libuuid-devel luajit-devel openssl-devel pcre-devel xz-devel && \
+dnf install -y bison cmake file flatbuffers-devel flex gcc-c++ hwloc-devel hyperscan-devel libdnet-devel libpcap-devel libuuid-devel luajit-devel make openssl-devel pcre-devel xz-devel && \
 # Install the Snort developer requirements
 dnf install -y cppcheck git lcov libasan libtsan vim && \
 # Install programs necessary for documentation generation
