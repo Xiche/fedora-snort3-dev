@@ -9,24 +9,27 @@ RUN \
 dnf upgrade --refresh -y && \
 # Install the Snort build dependencies
 dnf install -y \
-    bison \
+    autoconf \
+    automake \
     cmake \
     file \
     flatbuffers-devel \
-    flex \
     gcc-c++ \
     gperftools-devel \
     hwloc-devel hyperscan-devel \
     libdnet-devel \
+    libmnl-devel \
     libpcap-devel \
+    libtool \
     libuuid-devel \
     luajit-devel \
     make \
     openssl-devel \
     pcre-devel \
     xz-devel \
+    zlib-devel \
 && \
-# Install the Snort developer requirements
+# Install the Snort developer conveniences
 dnf install -y \
     cppcheck \
     gdb \
