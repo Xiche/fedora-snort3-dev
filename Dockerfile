@@ -16,11 +16,13 @@ dnf install -y \
     flatbuffers-devel \
     gcc-c++ \
     gperftools-devel \
-    hwloc-devel hyperscan-devel \
+    hwloc-devel \
+    hyperscan-devel \
     libdnet-devel \
     libmnl-devel \
     libpcap-devel \
     libtool \
+    libunwind-devel \
     libuuid-devel \
     luajit-devel \
     make \
@@ -31,10 +33,8 @@ dnf install -y \
 && \
 # Install the Snort developer conveniences
 dnf install -y \
-    cppcheck \
     gdb \
     git \
-    lcov \
     libasan \
     libtsan \
     vim \
